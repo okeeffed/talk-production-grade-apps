@@ -21,6 +21,8 @@ mdc: true
 
 ...and how <strong class="text-blue-500">EffectTS</strong> helps to achieve this
 
+<!-- ...Except I ran out of time for the EffectTS side of things -->
+
 ---
 
 <h1 class="bg-gradient-to-bl from-cyan-500 to-blue-500 bg-clip-text text-transparent leading-normal text-center">Production Grade<br/>Applications</h1>
@@ -54,6 +56,7 @@ level: 2
   </li>
 </ol>
 
+<!-- Except I also ran out of time for Rolling forward -->
 ---
 
 <ol>
@@ -94,6 +97,8 @@ level: 2
   </li>
 </ol>
 
+<!-- A lot of great content out there for SOLID and GOF. I wanted to explore some less-common ideas. -->
+
 ---
 
 ## My <strong class="text-blue-400">desired outcome</strong> for you
@@ -105,6 +110,8 @@ level: 2
 ## My <strong class="text-blue-400">desired outcome</strong> for you
 
 <div class="text-center">Walk out of here with some fresh takes on <strong class="text-purple-400">what success looks like</strong> for a <strong class="text-blue-400">production-grade application.</strong></div>
+
+<!-- A lot of this talk will be at an application level with some deviations here and there. In general, I hope everyone as a programmer can come out of this with fresh ideas or fresh arguments against these ideas. -->
 
 --- 
 
@@ -126,12 +133,16 @@ level: 2
 
 <img src="/imgs/fetch-1.png">
 
+<!-- Ship it! There isn't even error handling. -->
+
 ---
 transition: slide-left
 level: 2
 ---
 
 <img src="/imgs/fetch-2.png">
+
+<!-- Next: Add validation -->
 
 ---
 transition: slide-left
@@ -140,12 +151,16 @@ level: 2
 
 <img src="/imgs/fetch-3.png">
 
+<!-- Next: Add retries -->
+
 ---
 transition: slide-left
 level: 2
 ---
 
 <img src="/imgs/fetch-4.png">
+
+<!-- Next: Add interrupts -->
 
 ---
 transition: slide-left
@@ -154,12 +169,16 @@ level: 2
 
 <img src="/imgs/fetch-5.png">
 
+<!-- Next: Add tracing -->
+
 ---
 transition: slide-left
 level: 2
 ---
 
 <img src="/imgs/fetch-6.png">
+
+<!-- What does less brain-load look like? -->
 
 ---
 transition: slide-left
@@ -199,6 +218,8 @@ Handling of <strong class="text-red-400">state</strong>
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold">The <span class="text-purple-400">iron triangle</span> of programming</span>
 
+<!-- We are going to walk through each of these, but this section isn't really a "problem/solution" part of the talk, but more of a "hey, these are some useful ideas to think about when talking complexity". -->
+
 ---
 
 ## 1. Handling of state
@@ -206,6 +227,8 @@ Handling of <strong class="text-red-400">state</strong>
 Managing data  <strong class="text-purple-400">throughout the application's lifecycle</strong>.
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold">The <span class="text-purple-400">iron triangle</span> of programming</span>
+
+<!-- State management comes in many flavors and at very different layers, but let's walk through a contrived example of state management woes -->
 
 ---
 
@@ -231,6 +254,8 @@ Managing data  <strong class="text-purple-400">throughout the application's life
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold">The <span class="text-purple-400">iron triangle</span> of programming</span>
 
+<!-- In our example, we have two classes mutating shared state, and the purpose of our individual counter classes is lost. At scale, if we had an equivalent of 60 classes using this shared state, then that entanglement of shared state becomes problematic to debug as the application grows. -->
+
 ---
 
 <img src="/imgs/state.png">
@@ -244,6 +269,8 @@ Managing data  <strong class="text-purple-400">throughout the application's life
 As the <strong class="text-purple-400">total amount of code grows</strong>,  <br/>so too does the difficulty of managing it.
 
 <span class="absolute bottom-12 left-12 text-2xl  font-bold">The <span class="text-purple-400">iron triangle</span> of programming</span>
+
+<!-- You look at something and think "there is a lot to take in". The old adage "the best code is zero code" -->
 
 ---
 
@@ -367,13 +394,15 @@ transition: slide-left
 
 ---
 
+## <strong class="text-purple-400">Domain</strong> in our <strong class="text-blue-400">input</strong><br/><strong class="text-purple-400">Range</strong> is our <strong class="text-blue-400">output</strong>
+
+---
+
 <img src="/imgs/math-formula.png" >
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold"><span class="text-purple-400">Domain, ranges</span> and testing</span>
 
----
 
-## <strong class="text-purple-400">Domain</strong> in our <strong class="text-blue-400">input</strong><br/><strong class="text-purple-400">Range</strong> is what can be our <strong class="text-blue-400">output</strong>
 
 ---
 
@@ -476,6 +505,8 @@ transition: slide-left
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
 
+<!-- What happens to the type signature when you throw errors? -->
+
 ---
 
 <h2 class="font-6xl"><strong>Aim of the game:</strong> control what you <strong class="text-green-400">can</strong>, manage what you <strong class="text-red-400">can't</strong></h2>
@@ -497,6 +528,8 @@ transition: slide-left
 <h2 class="font-6xl italic">An <span class="text-purple-400">architectural pattern</span> that combines <span class="text-green-400">functional programming principles</span> with <span class="text-blue-400">imperative programming</span>.</h2>
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+<!-- Multi-paradigm languages like Ruby, Python and JavaScript can benefit greatly from this. Other languages with opinions may not benefit so much. -->
 
 --- 
 
