@@ -55,6 +55,26 @@ level: 2
 </ol>
 
 ---
+
+<ol>
+  <li>
+    <strong class="text-blue-400">Complexity</strong> and the <strong class="text-purple-400">iron triangle of programming</strong>
+  </li>
+  <li>
+    <strong class="text-blue-400">Domains, ranges</strong> and <strong class="text-purple-400">testing</strong>
+  </li>
+  <li>
+    <strong class="text-blue-400">Two types</strong> of <strong class="text-purple-400">errors</strong>
+  </li>
+  <li>
+    <strong class="text-blue-400">Functional core,</strong> <strong class="text-purple-400">imperative shell</strong>
+  </li>
+  <li>
+    <del><strong class="text-blue-400">Rolling forward</strong></del>
+  </li>
+</ol>
+
+---
 transition: slide-up
 level: 2
 ---
@@ -418,3 +438,145 @@ transition: slide-left
 <img src="/imgs/add-without-side-effects.png" >
 
 <span class="absolute bottom-12 left-12 text-2xl font-bold"><span class="text-purple-400">Domain, ranges</span> and testing</span>
+
+---
+transition: slide-left
+---
+
+# <strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong>
+
+---
+
+<ol class="text-6xl">
+  <li>
+    <strong class="text-red-400">Expected errors</strong>
+  </li>
+  <li>
+    <strong class="text-red-400">Unexpected errors (defects)</strong>
+  </li>
+</ol>
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
+
+---
+
+<img src="/imgs/validation-1.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
+
+---
+
+<img src="/imgs/validation-2.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
+
+---
+
+<img src="/imgs/validation-3.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
+
+---
+
+<h2 class="font-6xl"><strong>Aim of the game:</strong> control what you <strong class="text-green-400">can</strong>, manage what you <strong class="text-red-400">can't</strong></h2>
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
+
+---
+
+<h2 class="font-6xl"><strong>Aim of the game:</strong> control as many <strong class="text-green-400">expected errors</strong> as you <strong class="text-green-400">can</strong>, manage <strong class="text-red-400">defects</strong> that you <strong class="text-red-400">can't</strong></h2>
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Two types</strong> of <strong class="text-red-400">errors</strong></span>
+
+--- 
+
+# <strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong>
+
+--- 
+
+<h2 class="font-6xl italic">An <span class="text-purple-400">architectural pattern</span> that combines <span class="text-green-400">functional programming principles</span> with <span class="text-blue-400">imperative programming</span>.</h2>
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+<img src="/imgs/linkedin.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+<img src="/imgs/hanami.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+<img src="/imgs/dry-rb.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+---
+
+#### Functional Core
+
+- This is the inner part of your application where the main business logic resides.
+- It consists of <strong class="text-green-400">pure functions that don't have side effects</strong>.
+- These functions <strong class="text-green-400">always return the same output for a given input</strong>.
+- They <strong class="text-green-400">don't modify global state or perform I/O operations</strong>.
+- The functional core is easier to test, reason about, and maintain.
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+---
+
+#### Imperative Shell
+
+- This is the outer layer of your application that interacts with the outside world.
+- It <strong class="text-blue-400">handles I/O operations, database calls, user interface, etc</strong>.
+- It's <strong class="text-blue-400">where side effects are contained and managed.</strong>
+- The imperative shell coordinates the flow of data between the outside world and the functional core.
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+---
+
+<img src="/imgs/fcis-circle.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+<img src="/imgs/fcis-1.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+<img src="/imgs/fcis-2.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+<img src="/imgs/fcis-3.png" >
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+---
+
+#### For us at AP+
+
+- The imperative shell <strong>does not have to be the top-level of a function</strong>.
+- That boundary is fluid, but likely somewhere between our <strong class="text-green-400">service layer</strong> and <strong class="text-purple-400">pure functions</strong>.
+
+<span class="absolute bottom-12 left-12 text-2xl font-bold"><strong class="text-purple-400">Functional core,</strong><br/><strong class="text-blue-400">imperative shell</strong></span>
+
+--- 
+
+#### Conclusion
+
+- How does the <strong class="text-blue-500">iron triangle of programming</strong> affects us?
+- How does understanding <strong class="text-green-500">domain and range</strong> help us write better code?
+- How could an approach with <strong class="text-purple-500">imperative shell, functional core</strong> make TypeScript <del>feel less shit</del> work for us?
+- How should we manage our <strong class="text-red-500">expected vs unexpected errors</strong>?
